@@ -1,75 +1,84 @@
-Satellites Radar — Earth & Orbits (Three.js + Vite + TS)
+🛰️ Satellites Radar — Earth & Orbits
+Built with Three.js · TypeScript · Vite · Web Workers
 
-An interactive 3D visualization of Earth & Moon with physically-based day/night transitions, cloud layer, atmospheric glow, and real-time tracking of 10,000+ satellites using TLE data. Built with Three.js, TypeScript, Vite, and Web Workers for smooth performance.
+An interactive 3D visualization of Earth and Moon with realistic day/night transitions, clouds, atmospheric glow, and real-time tracking of 10,000+ satellites using TLE data.
+Built for smooth performance and scalability with Three.js, TypeScript, Vite, and Web Workers.
 
-Features
+🌟 Features
 
-Physically inspired Earth rendering: day/night, specular highlights, atmosphere glow
+✅ Physically inspired Earth rendering — day/night, specular reflections, atmospheric glow
+☁️ Dynamic clouds layer with transparency and parallax motion
+🛰️ Real-time satellite propagation via satellite.js running inside a Web Worker
+🎥 Smooth camera controls (orbit, zoom, pan)
+🎨 ACES Filmic tone mapping for cinematic visuals
+⚙️ Modular architecture — main thread ↔ worker with proper resource cleanup
+🖼️ High-resolution NASA textures with graceful fallbacks (8K → 4K → 2K)
 
-Dynamic clouds layer (alpha, soft parallax feel)
+🧠 Tech Stack
 
-High-res textures (NASA/Visible Earth) with graceful fallbacks
+Three.js — 3D engine
 
-Satellite propagation from TLE via satellite.js in a Web Worker
+satellite.js — TLE propagation
 
-Smooth camera controls (orbit/zoom/pan), ACES Filmic tone mapping
+TypeScript — type safety
 
-Modular architecture (main thread ↔ worker; clean disposal of resources)
+Vite — fast build & dev server
 
-Tech Stack
+Web Workers — heavy orbit calculations off-main-thread
 
-three.js, satellite.js
+(Optional) Git LFS — manage large texture assets
 
-TypeScript, Vite
-
-Web Workers
-
-Optional: Git LFS for large textures
-
-Project Structure
+🗂️ Project Structure
 .
-├─ public/                 # Static assets served as-is
+├─ public/                 # Static assets (textures, sky, TLEs)
 ├─ src/
-│  ├─ three.ts            # Earth/Moon scene setup, textures, glow, controls
-│  ├─ orbit-online.ts     # Main-thread worker controller & messaging
-│  ├─ orbits.worker.ts    # Worker: TLE parsing & propagation
-│  ├─ types/              # Shared TS types (e.g., TLE)
-│  └─ main.ts             # Vite/bootstrapping entry
-├─ tools/                 # Dev helpers / scripts (optional)
+│  ├─ three.ts            # Earth/Moon scene setup, lighting, shaders
+│  ├─ orbit-online.ts     # Main-thread controller, worker messaging
+│  ├─ orbits.worker.ts    # Satellite propagation logic
+│  ├─ types/              # Shared TypeScript definitions (TLE, etc.)
+│  └─ main.ts             # Vite app entry
+├─ tools/                 # Developer tools & scripts
 ├─ index.html
 ├─ vite.config.ts
 ├─ tsconfig*.json
 ├─ eslint.config.js
 └─ package.json
 
-Getting Started
+🚀 Getting Started
 Prerequisites
 
-Node.js 18+ (recommended 20+)
+Node.js v18+ (recommended v20+)
 
-pnpm / npm / yarn (any is fine)
+Any package manager: pnpm, npm, or yarn
 
-Install
-# choose one
+📦 Installation
+# Choose one
 pnpm install
 # or
 npm install
 # or
 yarn
 
-Run (dev)
+💻 Development
 pnpm dev
-# npm run dev / yarn dev
+# or
+npm run dev
+# or
+yarn dev
 
 
-Vite will print a local URL; open it in your browser.
+Then open the local URL printed in the terminal.
 
-Build (prod)
+🏗️ Build for Production
 pnpm build
 pnpm preview
-# npm run build && npm run preview
+# or
+npm run build && npm run preview
 
-Scripts
+
+This will build the project and serve the optimized version for testing.
+
+⚙️ Available Scripts
 {
   "scripts": {
     "dev": "vite",
@@ -79,3 +88,20 @@ Scripts
     "lint": "eslint ."
   }
 }
+
+🌍 Description
+
+This project visualizes the Earth and the Moon with physically accurate day/night transitions.
+The main purpose is to track more than 10,000 satellites orbiting around Earth in real time.
+
+🪐 Future Improvements
+
+🌌 UI for satellite filters and search
+
+⏱️ Time controls and orbit animation speed
+
+🧭 Ground track projection
+
+📱 Mobile layout optimization
+
+🧊 KTX2 compressed textures for faster loading
