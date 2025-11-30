@@ -1,10 +1,10 @@
-🛰️ Satellites Radar — Earth & Orbits
+### 🛰️ Satellites Radar — Earth & Orbits
 Built with Three.js · TypeScript · Vite · Web Workers
 
 An interactive 3D visualization of Earth and Moon with realistic day/night transitions, clouds, atmospheric glow, and real-time tracking of 10,000+ satellites using TLE data.
 Built for smooth performance and scalability with Three.js, TypeScript, Vite, and Web Workers.
 
-🌟 Features
+### 🌟 Features
 
 ✅ Physically inspired Earth rendering — day/night, specular reflections, atmospheric glow
 ☁️ Dynamic clouds layer with transparency and parallax motion
@@ -14,7 +14,7 @@ Built for smooth performance and scalability with Three.js, TypeScript, Vite, an
 ⚙️ Modular architecture — main thread ↔ worker with proper resource cleanup
 🖼️ High-resolution NASA textures with graceful fallbacks (8K → 4K → 2K)
 
-🧠 Tech Stack
+### 🧠 Tech Stack
 
 Three.js — 3D engine
 
@@ -44,37 +44,25 @@ Web Workers — heavy orbit calculations off-main-thread
 ├─ eslint.config.js
 └─ package.json
 
-🚀 Getting Started
+### 🚀 Getting Started
 Prerequisites
 
 Node.js v18+ (recommended v20+)
 
 Any package manager: pnpm, npm, or yarn
 
-📦 Installation
-# Choose one
-pnpm install
-# or
+### 📦 Installation
 npm install
-# or
-yarn
 
-💻 Development
-pnpm dev
-# or
+### 💻 Development
+
 npm run dev
-# or
-yarn dev
-
 
 Then open the local URL printed in the terminal.
 
-🏗️ Build for Production
-pnpm build
-pnpm preview
-# or
-npm run build && npm run preview
+### 🏗️ Build for Production
 
+npm run build && npm run preview
 
 This will build the project and serve the optimized version for testing.
 
@@ -89,12 +77,12 @@ This will build the project and serve the optimized version for testing.
   }
 }
 
-🌍 Description
+### 🌍 Description
 
 This project visualizes the Earth and the Moon with physically accurate day/night transitions.
 The main purpose is to track more than 10,000 satellites orbiting around Earth in real time.
 
-🪐 Future Improvements
+### 🪐 Future Improvements
 
 🌌 UI for satellite filters and search
 
